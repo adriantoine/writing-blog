@@ -21,7 +21,7 @@ a {
 }
 
 .article-title {
-  @apply leading-tight text-blue-700 font-serif text-5xl;
+  @apply leading-tight font-serif text-5xl;
 }
 
 .article-content h2 {
@@ -34,4 +34,5 @@ a {
   font-family: Lora, Georgia, Cambria, serif;
   line-height: 1.7;
   letter-spacing: -0.001em;
+  text-align: justify;
 }

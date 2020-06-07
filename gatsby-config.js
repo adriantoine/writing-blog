@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `adrien.codes`,
-    description: `Personal blog`,
+    title: `Adrien Prose`,
+    description: `Compilation de nouvelles pour le défi Like The Prose`,
     author: `@adriantoine`,
   },
   plugins: [
@@ -32,11 +32,6 @@ module.exports = {
         defaultLayouts: {
           posts: require.resolve("./src/components/posts-layout.tsx"),
         },
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-          },
-        ],
       },
     },
     `gatsby-transformer-sharp`,
@@ -44,13 +39,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `adrien.codes`,
-        short_name: `adrien.codes`,
+        name: `Adrien Prose`,
+        short_name: `Adrien Prose`,
         start_url: `/`,
         background_color: `#343a40`,
         theme_color: `#343a40`,
         display: `minimal-ui`,
-        icon: `src/images/me.jpg`,
+        icon: `src/images/pencil.jpg`,
       },
     },
     `gatsby-plugin-typescript`,
@@ -77,7 +72,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-twitter`,
     `gatsby-plugin-offline`,
   ],
 }

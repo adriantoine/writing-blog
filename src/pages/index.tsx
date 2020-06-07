@@ -1,22 +1,20 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import Avatar from "../components/avatar"
 import SEO from "../components/seo"
-import { IconGitHub, IconTwitter, IconLinkedIn } from "../components/icons"
+import { IconTwitter } from "../components/icons"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 const IndexPage = () => {
   const res = useStaticQuery(
     graphql`
       query {
-        allMdx {
+        allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
           edges {
             node {
               frontmatter {
                 title
                 path
-                synopsis
                 date(formatString: "MMMM DD, YYYY")
               }
             }
@@ -32,39 +30,34 @@ const IndexPage = () => {
 
       <div className="flex flex-col items-center mt-20">
         <aside className="flex flex-col items-center">
-          <div className="rounded-full overflow-hidden w-32 border-gray-800 border-4">
-            <Avatar />
-          </div>
-
           <h1 className="mt-2">
-            Hi! I'm{" "}
+            Hello, je suis{" "}
             <a className="font-bold" href="http://adriantoine.com">
               Adrien
             </a>
             !
           </h1>
 
-          <div className="flex justify-between w-40 mt-6">
+          <div className="max-w-3xl mt-6 text-center">
+            <span>
+              Sur ce blog, j'écris et je partage mes histoires écrites pour le
+              défi{" "}
+              <a
+                className="hover:text-blue-500"
+                href="https://www.theliteralchallenge.com/liketheprose"
+                target="_blank"
+              >
+                Like The Prose
+              </a>
+              ! Cela consisite principalement à écrire une nouvelle par jour sur
+              un thème donné.
+            </span>
             <a
-              className="hover:text-blue-500"
+              className="ml-2 hover:text-blue-500"
               href="https://twitter.com/adriantoine"
               target="_blank"
             >
-              <IconTwitter className="h-8 w-8" />
-            </a>
-            <a
-              className="hover:text-black"
-              href="https://github.com/adriantoine"
-              target="_blank"
-            >
-              <IconGitHub className="h-8 w-8" />
-            </a>
-            <a
-              className="hover:text-blue-700"
-              href="https://linkedin.com/in/adriantoine"
-              target="_blank"
-            >
-              <IconLinkedIn className="h-8 w-8" />
+              <IconTwitter className="h-4 w-4 inline-block" />
             </a>
           </div>
         </aside>
@@ -84,9 +77,6 @@ const IndexPage = () => {
                 <small className="text-gray-500 text-sm">
                   {post.node.frontmatter.date}
                 </small>
-                <p className="block mt-2 font-serif">
-                  {post.node.frontmatter.synopsis}
-                </p>
               </article>
             ))}
           </main>
