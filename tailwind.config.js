@@ -1,6 +1,7 @@
 // See https://tailwindcss.com/docs/configuration for details
 
 module.exports = {
+  purge: false,
   theme: {
     fontFamily: {
       sans:
