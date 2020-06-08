@@ -4,10 +4,10 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Titre
 - type: text
   name: path
-  label: path
+  label: Lien
 - type: datetime
   name: date
-  label: date
+  label: Date
