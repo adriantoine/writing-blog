@@ -13,3 +13,4 @@ fields:
   label: Date
 pages:
 - src/posts/test.md
+- src/posts/testaaa.mdx
