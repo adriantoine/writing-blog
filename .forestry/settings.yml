@@ -9,7 +9,7 @@ sections:
   label: Histoire
   create: documents
   match: "**/*"
-  new_doc_ext: ".mdx"
+  new_doc_ext: mdx
   templates:
   - histoire
 upload_dir: uploads
