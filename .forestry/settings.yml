@@ -9,6 +9,9 @@ sections:
   label: Histoire
   create: documents
   match: "**/*"
+  new_doc_ext: ".mdx"
+  templates:
+  - histoire
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
